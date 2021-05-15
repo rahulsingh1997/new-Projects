@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<head></head>
+<body>
+<div th:fragment="leftsidebar">
+
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" style="width:300px; margin-top: 2px; opacity: .95" id="mySidebar">
+        <button style="text-align: right; background-color: #E28964;" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-hide-large"><i class="fa fa-times" style="color: red;"></i></button>
+        <div class="w3-container w3-margin-top w3-margin-bottom" style="border-bottom: 1px solid #eceff1;">
+            <ul class="w3-ul w3-margin-bottom">
+                <li onclick="w3_close(); openpage(this.id);" rm="/raiseticket/manageraiseticket" class="w3-hover-theme my-hover w3-round-xxlarge abcd" id="personalDetails"><i class="fas fa-ticket-alt" style="font-size: 16px; width: 16px; color: orangered;"></i>&nbsp;&nbsp;&nbsp;Raise New Ticket</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>

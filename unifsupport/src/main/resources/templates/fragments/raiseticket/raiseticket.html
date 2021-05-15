@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="raisenewticket">
+
+    <div class="w3-main" style="margin-left: 300px;">
+
+        <div class="w3-bar">
+            <div class="w3-bar-item">
+                <h4 style="font-weight: 400;">
+                    <img onclick="w3_open()" class="w3-hide-large" src="/images/hide-grader-panel.png" style="cursor: pointer;"><i class="fas fa-ticket-alt" style="color: orangered;"></i>&nbsp;Raise New Ticket
+                </h4>
+            </div>
+            <div class="w3-bar-item w3-right" style="">
+                <div type="button" onclick="raiseticket();" class="w3-btn w3-blue w3-round-large"><i class="fas fa-save"></i> Submit</div>
+            </div>
+        </div>
+
+        <hr class="w3-margin-left w3-margin-right hrline">
+        <form method="post" id="RAISETICKETFORM" enctype="multipart/form-data">
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <p>
+                    <label>Title</label>
+                    <input class="w3-input w3-border" name="title" type="text">
+                </p>
+            </div>
+            <div class="w3-half">
+                <p>
+                    <label>Summary</label>
+                    <input class="w3-input w3-border" name="summary" type="text">
+                </p>
+            </div>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <p>
+                    <label>Status</label>
+                    <input class="w3-input w3-border" name="status"  type="text">
+                </p>
+            </div>
+            <div class="w3-half">
+                <p>
+                    <label>Attachment</label>
+                    <input class="w3-input w3-border" name="issuefile" type="file">
+                </p>
+            </div>
+        </div>
+        <div class="w3-row w3-margin">
+            <label>Description</label>
+            <textarea class="w3-input w3-border" name="description"  type="text"></textarea>
+        </div>
+        </form>
+
+        </div>
+
+
+        <script src="/js/raiseticket/raiseticket.js"></script>
+    </div>
+
+</div>
+</body>
+</html>

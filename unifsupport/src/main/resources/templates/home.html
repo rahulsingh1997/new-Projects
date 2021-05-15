@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unif Support</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/bootbox/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/w3.css" />
+    <link rel="stylesheet" type="text/css" href="/css/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/icon.css" />
+    <link rel="stylesheet" type="text/css" th:href="${theme}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/_custom.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-image: url('/images/back.png'); background-size:cover; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+<!-- Navbar -->
+<div th:replace="fragments/topNavbar :: navbar"></div>
+
+<div class="w3-main">
+    <div class="w3-row" style="padding-top: 69px; padding-bottom: 16px;">
+        <div th:replace="fragments/leftsidebar :: leftsidebar"></div>
+        <div id="replace_div">
+        </div>
+    </div>
+</div>
+
+<div id="overlayDiv1" class="w3-overlay w3-hide">
+    <div class="overlayContent">
+        <i class="fa fa-cog fa-spin" style="font-size: 70px; color: black;"></i>
+    </div>
+</div>
+
+<script src="/js/bootbox/bootstrap.min.js"></script>
+<script src="/js/bootbox/bootbox.all.min.js"></script>
+<script src="/js/datatables.min.js"></script>
+<script src="/js/loadforms.js"></script>
+<script type="text/javascript">
+    function w3_open() {
+        $("#mySidebar").css("display","block");
+    }
+    function w3_close() {
+        $("#mySidebar").css("display","none");
+    }
+</script>
+</body>
+</html>
